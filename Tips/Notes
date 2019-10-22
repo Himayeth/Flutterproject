@@ -1,0 +1,17 @@
+main function should be the main one and does not have any arguments. The main should be first as flutter looks for it.
+functions are called as function_name();
+but the main function need not be called because flutter itself calls it.
+To bring your code to the screen in main function you need to use a widget and bring the widget to your function. 
+
+Creating a root widget :-
+a widget is nothing but an object for which we need a class to define the blueprint of the widget or in other terms object ( java way )
+Also a class used to create a widget needs to have some features in order for flutter to know it is a class for a widget and that needs to be displayed on to the screen. So we make the class inherit from a base class -which comes from the flutter framework. 
+That base class coming from the flutter framework needs to be imported { import 'package:flutter/name'} this package consists of the base clsases we want. 
+Build method is important to be there in a class. Flutter calls build so it should be available in our code that needs to be displayed. It comes under statelesswidget class which comes with the fluttr package.
+
+A widget created by us always needs to return an other widget in the build method until we reach a widget that ship with flutter.
+
+The widgeting can be seein in materialapp constructor as we keep adding an element and then a built-in widget for that element and go on. 
+After that also we will not be able to display it all on the screen unless we make a few changes to the main method.
+
+In the main function :- runApp(this argument must be a widget, this widget is the one we built using baseclass() )
